@@ -5,10 +5,15 @@ class FileController {
     async store(req, res) {
         const { id } = req.params
         const produto = await Product.findById(id)
+
+        const { originalname: name, size, key, location: url = "" } = req.file;
         const file = await File.create({
-            url: req.file.path
-        })
-        produto.files.push(file)
+            name,
+            size,
+            key,
+            url
+        });
+        produto.files.push(file.url)
         await produto.save()
         return res.json(file)
     }

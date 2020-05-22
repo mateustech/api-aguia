@@ -6,6 +6,7 @@ const morgan = require('morgan')
 const config = require('./application/Config/general.js')
 const routes = require('./application/Routes/Routes.js')
 
+require('dotenv').config()
 
 class App {
     constructor() {
