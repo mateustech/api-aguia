@@ -1,8 +1,11 @@
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose');
+const morgan = require('morgan')
+
 const config = require('./application/Config/general.js')
 const routes = require('./application/Routes/Routes.js')
+
 
 class App {
     constructor() {
@@ -14,6 +17,7 @@ class App {
     middlewares() {
         this.express.use(express.json())
         this.express.use(cors())
+        this.express.use(morgan('dev'))
         routes(this.express)
     }
     connect() {
