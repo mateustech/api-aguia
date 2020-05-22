@@ -1,3 +1,7 @@
 # API REST
 
-## Api Desenvolvida Para Integrar Ao Ecommerce da Aguia Fábrica e Distribuidora.
+## Api Desenvolvida Para Integrar Ao Site Institucional da Aguia Fábrica e Distribuidora.
+
+
+#### Techs
+<button>NodeJS</button>
