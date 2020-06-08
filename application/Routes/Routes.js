@@ -5,8 +5,14 @@ module.exports = (app) => {
     const multer = require('multer')
     const multerConfig = require('../Config/multer')
 
-    app.post('/product', ProductController.store);
+    app.get('/product', ProductController.showAll);
+
     app.get('/product/:id', ProductController.show)
+
+    app.delete('/product/:id', ProductController.destroy)
+
+    app.post('/product', ProductController.store);
+
     app.post('/product/:id/files', multer(multerConfig).single('file'), FileController.store)
 
     app.get('/', (req, res) => {

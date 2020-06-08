@@ -12,6 +12,17 @@ class ProductController {
 
         return res.json(product)
     }
+    async showAll(req, res) {
+        const product = await Product.find().sort('-createdAt')
+
+        return res.json(product)
+    }
+    async destroy(req, res) {
+        const { id } = req.params;
+        await Product.findByIdAndDelete(id);
+        return res.send("Deletado");
+    }
+
 }
 
 module.exports = new ProductController()
