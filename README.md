@@ -1,6 +1,6 @@
 # API REST
 
-## Api Desenvolvida Para Integrar Ao Site Institucional da Aguia Fábrica e Distribuidora.
+## Api desenvolvida para integrar ao catálogo virtual da Aguia Fábrica e Distribuidora.
 
 ### :rocket: Tecnologias
 
